@@ -74,10 +74,9 @@ dependencies {
     implementation(libs.androidx.material3.v140alpha07)
     implementation(libs.androidx.material.icons.extended)
 
-    implementation(libs.androidx.glance.preview)
-    implementation(libs.androidx.glance.appwidget)
-    implementation(libs.androidx.glance)
-    implementation(libs.androidx.glance.appwidget.preview)
+    // Home-screen widget
+    implementation(libs.androidx.compose.remote.creation.compose)
+    implementation(libs.androidx.compose.remote.creation.android)
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.profileinstaller)

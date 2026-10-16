@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">DaysRemaining</string>
     <string name="days_remaining">days remaining</string>
+    <string name="widget_loading">Loading…</string>
+    <string name="widget_no_events">No events selected.\nConfigure widget.</string>
 </resources>

@@ -6,7 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.ExperimentalFoundationApi
 import com.ossalali.daysremaining.presentation.ui.MainScreen
-import com.ossalali.daysremaining.widget.EventWidget.Companion.EVENT_ID
+import com.ossalali.daysremaining.widget.WidgetIntents
+import com.ossalali.daysremaining.widget.WidgetIntents.EVENT_ID
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        if (intent?.action == "com.ossalali.daysremaining.action.ADD_EVENT") {
+        if (intent?.action == WidgetIntents.ADD_EVENT_ACTION) {
             shouldNavigateToAddEvent = true
         }
 
