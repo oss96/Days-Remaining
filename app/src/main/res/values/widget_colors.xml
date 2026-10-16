@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Colors for the RemoteViews widget shown before Android 16. -->
+<resources>
+    <color name="widget_background">#FFF3EDF7</color>
+    <color name="widget_primary">#FF6750A4</color>
+    <color name="widget_secondary_container">#FFE8DEF8</color>
+    <color name="widget_on_secondary_container">#FF1D192B</color>
+    <color name="widget_on_surface">#FF1C1B1F</color>
+</resources>

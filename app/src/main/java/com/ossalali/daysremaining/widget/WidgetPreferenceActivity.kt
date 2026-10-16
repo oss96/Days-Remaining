@@ -6,12 +6,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.glance.appwidget.GlanceAppWidgetManager
-import androidx.lifecycle.lifecycleScope
 import com.ossalali.daysremaining.widget.di.WidgetRepositoryEntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class WidgetPreferenceActivity : ComponentActivity() {
@@ -61,11 +58,7 @@ class WidgetPreferenceActivity : ComponentActivity() {
     val resultValue = Intent().apply { putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId) }
     setResult(RESULT_OK, resultValue)
 
-    lifecycleScope.launch {
-      val glanceId =
-          GlanceAppWidgetManager(this@WidgetPreferenceActivity).getGlanceIdBy(appWidgetId)
-      EventWidget().update(this@WidgetPreferenceActivity, glanceId)
-      finish()
-    }
+    refreshWidget(this, appWidgetId)
+    finish()
   }
 }
